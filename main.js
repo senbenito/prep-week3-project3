@@ -29,10 +29,12 @@ var me = {
   city: 'Boulder',
   jobTitle: 'dad',
 };
-document.getElementById('q1').innerHTML = <ul>
-<li>me.firstName</li>;
-console.log(me.firstName);
 
+document.getElementById('q1').innerHTML = "Here's me: "
++ me.firstName + ', '
++ me.lastName + ', '
++ me.city + ', '
++ me.jobTitle;
 
 // 2. To your "me" object, add a key of "family" with the value being an array of three of your family members and display in the HTML page.
 // Example of desired output: { name: 'Bob Smith',
@@ -40,9 +42,13 @@ console.log(me.firstName);
 //                              jobTitle: 'professional wrestler',
 //                              family: ['Joan', 'Kyle', 'Hank'] }
 
-// me.family = ['Rachel', 'Caleb', 'Leonard'];
-// document.getElementById('q2').innerHTML = me;
-// console.log(me);
+me.family = ['Rachel', 'Caleb', 'Leonard'];
+document.getElementById('q2').innerHTML = "Here's us: "
++ me.firstName + ', '
++ me.lastName + ', '
++ me.city + ', '
++ me.jobTitle + ', '
++ me.family[0];
 
 
 // 3. Using the "me" object, use dot notation and bracket notation to access the value of your city and display the results in the HTML page.
