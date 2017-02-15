@@ -48,12 +48,12 @@ document.getElementById('q2').innerHTML = "Here's us: "
 + me.lastName + ', '
 + me.city + ', '
 + me.jobTitle + ', '
-+ me.family[0];
-
++ me.family.join(', ');
 
 // 3. Using the "me" object, use dot notation and bracket notation to access the value of your city and display the results in the HTML page.
 
-
+document.getElementById('q3a').innerHTML = me.city;
+document.getElementById('q3b').innerHTML = me['city'];
 
 
 
@@ -97,10 +97,15 @@ var invitees = { adults: [{
 
 
 // 4. Access Penny's dinner choice (this will be the second item in his dinnerChoice array)
+document.getElementById('q4').innerHTML = 'This is Penny\'s dinner choice: ' + invitees.adults[0].dinnerChoice[1];
 
 // 5. Access Pablo's table number.
+document.getElementById('q5').innerHTML = 'This is Pablo\'s table number: ' + invitees.children[1].table;
 
 // 6. Access Lauren's seating specialConsideration.
+document.getElementById('q6').innerHTML = 'This is Lauren\'s special seating Consideration: ' + invitees.adults[2].specialConsiderations.seating;
+// document.getElementById('q6').innerHTML = 'This is Lauren\'s special seating Consideration: ' + invitees.adults[name['Lauren']].specialConsiderations.seating;
+
 
 // 7. Access Billy's dessert choice (this will be the third item in his dinnerChoice array)
 
